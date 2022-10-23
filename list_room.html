@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>List Your Room</title>
+
+<link rel = "stylesheet" type = "text/css" href = "css/style.css">
+
+<style>
+
+
+p label{
+
+	text-align: left;
+	width: 100px;
+	display: inline-block;
+
+	
+}
+
+input[type=text] {
+  padding:10px;
+  margin:10px 0; // add top and bottom margin
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  width:200px;
+  display: inline-block;s
+}
+
+input, textarea {
+  font-family:inherit;
+  font-size: inherit;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+    
+    <nav class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="">Privacy</a> 
+        <a href="contact.html">Contact</a>
+        <img src="">
+        <a href="about.html">About Us</a>
+        <a href="">Privacy</a>
+        
+    </nav>
+
+
+</header>
+
+<main>
+	<h1>
+		List Your Room
+	</h1>
+
+	<form>
+
+		<p class="user_Info"><input type="text" name="fname" placeholder="First Name" /></p>
+		<p class="user_Info"><input type="text" name="lname" placeholder="Last Name" /></p>
+
+		<p class="user_Info"><input type="text"  name='phone' placeholder="Phone*" /></p>
+
+		<p class="room_Info address"> <input type="text" name='street' placeholder="Street*" /></p>
+		<p class="room_Info address"><input type="text" name='city' placeholder="City*" /></p>
+
+		
+
+		<p class="room_Info"><input type="text" name='price' placeholder="Price/Month*" /></p>
+
+		<p class="start_Date"><label>Start Date*:</label><input type="datetime-local" id="Start_Test_DatetimeLocal"/></p>
+		<p class="end_Date"><label>End Date*:</label><input type="datetime-local" id="End_Test_DatetimeLocal"/></p>
+
+		<p class="room_Img"><label>Room Image(s):</label><input type="file" id="room_Image" name="room_photo">
+
+		<input type = "button" value = "List Room" id="list_button" onclick="validate()"/>
+
+</form>
+
+	
+</main>
+
+<footer>
+    <nav class="nav-items">
+        <a href="contact.html">Contact</a>
+    </nav>
+</footer>
+	
+
+</body>
+
+
+
+</html>
