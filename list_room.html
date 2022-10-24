@@ -4,6 +4,8 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 
 <title>List Your Room</title>
 
@@ -32,12 +34,84 @@ input[type=text] {
   display: inline-block;
 }
 
+input[type=email] {
+  padding:10px;
+  margin:10px 0; // add top and bottom margin
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  width:200px;
+  display: inline-block;
+}
+
 input, textarea {
   font-family:inherit;
   font-size: inherit;
 }
 
+#subject{
+  padding:10px;
+  margin:10px 0; // add top and bottom margin
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  width:200px;
+  display: inline-block;s
+}
+
 </style>
+
+<script>
+
+	function validate(){
+
+		email = document.getElementById('email').value;
+		Street = document.getElementById('street').value;
+		city = document.getElementById('city').value;
+		Sdate = document.getElementById('Start_Test_DatetimeLocal').value;
+		Edate = document.getElementById('End_Test_DatetimeLocal').value;
+
+
+		if(email == ""){
+			alert("Please enter your email address")
+		}
+		else if(Street == ""){
+			alert("Please enter the street name")
+		}
+		else if(city==""){
+			alert("Please enter the name of the city")
+		}
+		else if(Sdate == ""){
+			alert("Please enter the Move In date")
+		}
+		else if(Edate == ""){
+			alert("Please enter the Move Out date")
+		}
+		else {
+
+			wait = false;
+
+			alert("We are validating your room! This might take a minute");
+
+		
+			for (i = 0; i<1000000000; i++){
+
+				if(i == 1000000000-2){
+					wait = true;
+				}
+
+			}
+
+			if(wait == true){
+				document.write("All Done!! Your room has successfully been listed!")
+			}
+
+		}
+		
+	}
+</script>
 
 
 </head>
@@ -64,24 +138,29 @@ input, textarea {
 		List Your Room
 	</h1>
 
-	<form>
+	<form action="#" >
 
-		<p class="user_Info"><input type="text" name="fname" placeholder="First Name" /></p>
-		<p class="user_Info"><input type="text" name="lname" placeholder="Last Name" /></p>
+		<p class="user_Info"><input type="text" id="fname" placeholder="First Name" /></p>
+		<p class="user_Info"><input type="text" id="lname" placeholder="Last Name" /></p>
 
-		<p class="user_Info"><input type="text"  name='phone' placeholder="Phone*" /></p>
+		<p class="user_Info"><input type="email"  id='email' placeholder="Email*" required/></p>
 
-		<p class="room_Info address"> <input type="text" name='street' placeholder="Street*" /></p>
-		<p class="room_Info address"><input type="text" name='city' placeholder="City*" /></p>
+		<p class="room_Info address"> <input type="text" id='street' placeholder="Street*" required/></p>
+		<p class="room_Info address"><input type="text" id='city' placeholder="City*" required /></p>
 
 		
 
-		<p class="room_Info"><input type="text" name='price' placeholder="Price/Month*" /></p>
+		<p class="room_Info"><input type="text" id='price' placeholder="Price/Month*" /></p>
+		<p class="num_Bathrooms"><input type="text" id="bathrooms" placeholder="Number of bathrooms"/></p>
 
-		<p class="start_Date"><label>Start Date*:</label><input type="datetime-local" id="Start_Test_DatetimeLocal"/></p>
-		<p class="end_Date"><label>End Date*:</label><input type="datetime-local" id="End_Test_DatetimeLocal"/></p>
+		<div class="room_Description">
+        <textarea id="subject" name="subject" placeholder="Extra information about the room...." /></textarea>
+      </div>
 
-		<p class="room_Img"><label>Room Image(s):</label><input type="file" id="room_Image" name="room_photo">
+		<p class="start_Date"><label>Move In*:</label><input type="datetime-local" id="Start_Test_DatetimeLocal" required/></p>
+		<p class="end_Date"><label>Move Out*:</label><input type="datetime-local" id="End_Test_DatetimeLocal" required/></p>
+
+		<p class="room_Img"><label>Room Image(s):</label><input type="file" id="room_Image" name="room_photo" required/>
 
 		<input type = "button" value = "List Room" id="list_button" onclick="validate()"/>
 
