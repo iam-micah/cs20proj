@@ -47,13 +47,14 @@ header {
     display: block;
     width: 100%;
     background: var(--bg-color);
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 }
 
 .container {
+    margin-top: 200px;
     max-width: 1068px;
     margin-left: auto;
     margin-right: auto;
