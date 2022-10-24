@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> About Us </title>
+
+<link rel = "stylesheet" type = "text/css" href = "css/style.css">
+
+<style>
+    ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
+</style>
+
+</head>
+
+
+
+<body>
+
+    <script
+	src="https://code.jquery.com/jquery-3.6.1.js"
+	integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+	crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<header>
+    
+    <nav class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="">Privacy</a> 
+        <a href="contact.html">Contact</a>
+        <img src="">
+        <a href="about.html">About Us</a>
+        <a href="">Privacy</a>
+        
+    </nav>
+
+
+</header>
+
+<main>
+    <h1>
+        View All Available Rooms
+    </h1>
+    <h2>
+        Click on any picture to learn more
+    </h2>
+    <script>
+        const roomImgs = ["images/apartment_0.jpg", "images/apartment_1.jpg",
+        "images/apartment_2.jpg","images/apartment_3.jpg"];
+        
+
+        $(document).ready(function(){
+            
+            $("#apt1").append("<img src='" + roomImgs[0] + "' width='65%'/>");
+            $("#apt2").append("<img src='" + roomImgs[1] + "' width='65%'/>");
+            $("#apt3").append("<img src='" + roomImgs[2] + "' width='65%'/>");
+            $("#apt4").append("<img src='" + roomImgs[3] + "' width='65%'/>");
+            
+            $("#apt1").click(function(e){
+                window.location.href = "https://google.com";
+            });
+            $("#apt2").click(function(e){
+                window.location.href = "https://google.com";
+            });
+            $("#apt3").click(function(e){
+                window.location.href = "https://google.com";
+            });
+            $("#apt4").click(function(e){
+                window.location.href = "https://google.com";
+            });
+        })
+
+    </script>
+
+    <ul class = twoCols>
+        <li id='apt1' class="left">
+            Price: $1050<br>
+            Location: 45 Upland Rd Somerville Ma<br>
+        </li>
+        <li id='apt2' class="left">
+            Price: $950<br>
+            Location: 69 Bromfield Rd Somerville Ma<br>
+        </li>
+        <li id='apt3' class="right">
+            Price: $980<br>
+            Location: 79 Ossipee Rd Somerville Ma<br>
+        </li>
+        <li id='apt4' class="right">
+            Price: $1020<br>
+            Location: 19 Fairmount St Medford Ma<br>
+        </li>
+    </ul> 
+
+</main>
+
+
+<footer>
+    <nav class="nav-items">
+        <a href="contact.html">Contact</a>
+    </nav>
+</footer>
+
+</body>
+
+</html>
+
