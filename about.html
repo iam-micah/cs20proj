@@ -8,7 +8,95 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 <link rel="stylesheet" href="css/styles.css">
 
-
+<style>
+    body {
+        background-color: #fcfcfc;
+    }
+    .row {
+        border: 1px solid var(--main-color);
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(18rem,auto));
+        gap: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    .column {
+        width: 100%;
+        border-radius: 3rem;
+        background-color: var(--bg-color);
+    }
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 3.5rem;
+        color: var(--second-color);
+    }
+    .card {
+        box-shadow: 0 0 0 2.2rem var(--box-shadow);
+        padding: 3.5rem 1rem;
+        border-radius: 3rem;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: .3s;
+    }    
+    .card:hover {
+        background: var(--main-color);
+        color: var(--bg-color);
+    }
+    .card:hover .img-container {
+        transform: scale(1.2);
+    }
+    .card .img-container {
+        width: 8rem;
+        height: 8rem;
+        background: var(--main-color);
+        padding: 0.5rem;
+        border-radius: 50%;
+        margin: 0 auto 2rem auto;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    .card h3 {
+        font-weight: 700;
+    }
+    .card p {
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0.5rem 0 2rem 0;
+        letter-spacing: 2px;
+    }
+    .card .content {
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    .icons {
+        width: 50%;
+        min-width: 180px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.4rem;
+    }
+    @media screen and (min-wdith: 768px) {
+        section {
+            padding: 1rem 7rem;
+        }
+    }
+    @media screen and (min-wdith: 992px) {
+        section {
+            padding: 1rem;
+        }
+        .card {
+            padding: 5rem 1rem;
+        }
+    }
+</style>
 </head>
 
 
@@ -37,50 +125,98 @@
 </header>
 
 <main>
-    <h1>
-        About Us
-    </h1>
-
-    <div>
-        <!--Replace other pics with real ones once I get them also the bios-->
-        <img src="images/walterpic.jpg" style="width: 15%" />
-        <h3>
-            Walter Wagude, Team Leader/Coding
-        </h3>
-        <p>
-            Walter is a Junior at Tufts University studying Computer Engineering.</br>
-            He is on the Cross Country team and enjoys photography in his free time. 
-        </p>
-        <img src="images/ryan_pic.jpg" style="width: 15%" />
-        <h3>
-            Ryan Proulx, Design/Coding
-        </h3>
-        <p>
-            Ryan is a Junior at Tufts University studying Computer Science.</br>
-            He is also on the Cross Country team with Walter and enjoys </br>
-            playing Chess and Golfing in his free time. 
-        </p>
-        <img src="images/ryan_pic.jpg" style="width: 15%" />
-        <h3>
-            Micah Akai-Nettey, Design/Coding
-        </h3>
-        <p>
-            Micah is a Junior at Tufts University studying Computer Science.</br>
-            
-        </p>
-        <img src="images/ryan_pic.jpg" style="width: 15%" />
-        <h3>
-            Devon Minor, Design/Coding
-        </h3>
-        <p>
-            Devon is a Senior at Tufts University studying Computer Science.</br>
-            
-        </p>
-    </div>
-
-    
-    
-
+    <section>
+        <div class="row">
+            <h1>Our Team</h1>
+        </div>
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="img/walter.png" alt="picture of Ryan">
+                    </div>
+                    <h3>Walter Wagude</h3>
+                    <p class="title">Team Leader/Coding</p>
+                    <p class="content">
+                        Walter is a Junior at Tufts University studying Computer Engineering.<br/>
+                        He is on the Cross Country team and enjoys photography in his free time. 
+                    </p>
+                    <div class="icons">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                        <a href="#"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="img/ryan.png" alt="picture of Ryan">
+                    </div>
+                    <h3>Ryan Proulx</h3>
+                    <p class="title">Design/Coding</p>
+                    <p class="content">
+                        Ryan is a Junior at Tufts University studying Computer Science.<br>
+                        He is also on the Cross Country team with Walter and enjoys <br>
+                        playing Chess and Golfing in his free time.  
+                    </p>
+                    <div class="icons">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                        <a href="#"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 3 -->
+            <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="img/micah.png" alt="picture of Ryan">
+                    </div>
+                    <h3>Micah Nettey</h3>
+                    <p class="title">Coding/Design</p>
+                    <p class="content">
+                        Walter is a Junior at Tufts University studying Computer Science.<br/>
+                        He is a YouTuber and loves watching anime during his free time. 
+                    </p>
+                    <div class="icons">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                        <a href="#"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 4 -->
+            <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="img/ryan.png" alt="picture of Ryan">
+                    </div>
+                    <h3>Devon</h3>
+                    <p class="title">Coding/Design</p>
+                    <p class="content">
+                        Walter is a senior at Tufts University studying Computer Science.<br/>
+                        He is blah blah lbah blah blah. 
+                    </p>
+                    <div class="icons">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                        <a href="#"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 
