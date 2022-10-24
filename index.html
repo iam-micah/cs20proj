@@ -1,68 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Midterm Homepage </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel = "stylesheet" type = "text/css" href = "css/style.css">
-
-
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Tufts Sublet</title>
 </head>
-
-
-
 <body>
-<header>
-    
-    <nav class="nav-items">
-            <a href="index.html">Home</a>
-            <a href="">Privacy</a> 
-            <a href="contact.html">Contact</a>
-            <img src="">
-            <a href="about.html">About Us</a>
-            <a href="">Privacy</a>
-        
-    </nav>
+
+    <!-- Navbar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <input type="checkbox" name="" id="menu">
+            <label for="menu"><i class="bx bx-menu" id="menu-icon"></i></label>
+            <!-- Nav List -->
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">List Room</a></li>
+                <li><a href="#">Find Room</a></li>
+            </ul>
+
+            <!-- Log In Button -->
+            <a href="#" class="login-btn">Log In</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home container" id="home">
+        <div class="home-text">
+            <h1>The Best Subletting <br> Experience You Need <br> To Be Happy</h1>
+            <a href="#" class="login-btn">Sign Up</a>
+        </div>
+    </section>
+
+    <!-- pitch -->
+    <section class="pitch container" id="pitch">
+        <!-- Box 1 -->
+        <div class="box">
+            <i class="bx bx-user"></i>
+            <h3>Simple Experience</h3>
+            <p>Our platform provides a simple experience in searching for Off-Campus
+                housing for a semester, a year or a summer.
+            </p>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="box">
+            <i class="bx bx-desktop"></i>
+            <h3>Support</h3>
+            <p>We provide 24/7 support with on call, phone, or email. Our support staff
+                will help you with any concerns you have.
+            </p>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box">
+            <i class="bx bx-home-alt"></i>
+            <h3>Best Homes</h3>
+            <p>We don't just provide you with a living space, we provide you with a home 
+                away from home.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about container" id="about">
+        <div class="about-img">
+            <img src="img/about.jpg" alt="about us">
+        </div>
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>50 Years of Providing <br> Great Sublets For You!</h2>
+            <p>As alums of Tufts, we understand that the housing experience can be a bit frustrating</p>
+            <p>That is why we simplify the process with an all in one platform for subletting</p>
+            <p>Our track record is proven with 100% satisfaction guaranteed</p>
+            <a href="#" class="login-btn">Learn More</a>
+        </div>
+    </section>
 
 
-</header>
+    <!-- Rooms -->
+    <section class="rooms container" id="rooms">
+        <div class="heading">
+            <span>Recent Listings</span>
+            <h2>Our Featured Spaces</h2>
+            <p> Discover Our Most Recent Listings</p> <br> We guarantee you'll find the right one for you</p>
+        </div>
+        <div class="rooms-container container">
+            <!-- Box 1 -->
+            <div class="box">
+                <img src="img/picture1.jpg" alt="picture1">
+                <h3>$1,000</h3>
+                <div class="content">
+                    <div class="tex">
+                        <h3>37 Adams</h3>
+                        <p>Full Year</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bx-bed"><span>5</span></i>
+                        <i class="bx bx-bath"><span>2</span></i>
+                    </div>
+                </div>
+            </div>
 
-<main>
-    <h1>
-        This is our title
-    </h1>
-    
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </br>
-        labore et dolore magna aliqua. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque.</br>
-        Arcu non odio euismod lacinia. Sagittis aliquam malesuada bibendum arcu. Nunc non blandit massa enim nec.</br>
-        Mus mauris vitae ultricies leo. Amet consectetur adipiscing elit pellentesque habitant morbi tristique.</br>
-        Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit.</br>
-        Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Quisque id diam vel quam elementum pulvinar. </br>
-        Eget arcu dictum varius duis. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. </br>
-        Facilisis sed odio morbi quis commodo odio.</br>
+            <!-- Box 2 -->
+            <div class="box">
+                <img src="img/picture2.jpg" alt="picture2">
+                <h3>$2,000</h3>
+                <div class="content">
+                    <div class="tex">
+                        <h3>20 Winthrop</h3>
+                        <p>Summer</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bx-bed"><span>5</span></i>
+                        <i class="bx bx-bath"><span>2</span></i>
+                    </div>
+                </div>
+            </div>
 
-        Nunc id cursus metus aliquam eleifend mi in nulla posuere. At risus viverra adipiscing at in tellus integer.</br> 
-        Ultricies tristique nulla aliquet enim. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus.</br>
-        Semper viverra nam libero justo laoreet sit amet cursus. Senectus et netus et malesuada fames ac turpis egestas sed. </br>
-        Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Diam vulputate ut pharetra sit. </br>
-        Viverra maecenas accumsan lacus vel. Urna et pharetra pharetra massa massa ultricies mi.</br>
-        Aliquam ut porttitor leo a diam sollicitudin tempor id. Facilisis magna etiam tempor orci eu.</br>
-        Sed id semper risus in. Tristique nulla aliquet enim tortor at auctor urna. Morbi tristique senectus et netus et malesuada.</br>
-        Sem nulla pharetra diam sit amet. Quisque sagittis purus sit amet. </br>
-        Tellus at urna condimentum mattis pellentesque id nibh. Ut consequat semper viverra nam libero justo laoreet sit amet. </br>
-        Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper.</br>
+            <!-- Box 3 -->
+            <div class="box">
+                <img src="img/picture3.jpg" alt="picture3">
+                <h3>$2,000</h3>
+                <div class="content">
+                    <div class="tex">
+                        <h3>81 Jane</h3>
+                        <p>Fall</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bx-bed"><span>5</span></i>
+                        <i class="bx bx-bath"><span>2</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="box">
+                <img src="img/picture4.jpg" alt="picture4">
+                <h3>$2,000</h3>
+                <div class="content">
+                    <div class="tex">
+                        <h3>18 Sussex</h3>
+                        <p>Spring</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bx-bed"><span>5</span></i>
+                        <i class="bx bx-bath"><span>2</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 5 -->
+            <div class="box">
+                <img src="img/picture5.jpg" alt="picture5">
+                <h3>$2,000</h3>
+                <div class="content">
+                    <div class="tex">
+                        <h3>22 Downland</h3>
+                        <p>Full Year</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bx-bed"><span>5</span></i>
+                        <i class="bx bx-bath"><span>2</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 6 -->
+            <div class="box">
+                <img src="img/picture6.jpg" alt="picture6">
+                <h3>$2,000</h3>
+                <div class="content">
+                    <div class="tex">
+                        <h3>28 Westfield</h3>
+                        <p>Summer</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bx-bed"><span>5</span></i>
+                        <i class="bx bx-bath"><span>2</span></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support -->
+    <section class="support container">
+        <h2>Have a Question in Mind? <br> Let Us Help You</h2>
+        <form action="">
+            <input type="email" name="" id="email-box" placeholder="   john.doe@tufts.edu" required>
+            <input type="submit" value="Send" class="login-btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <!-- Logo -->
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#">List Room</a>
+                <a href="#">Find Room</a>
+                <a href="#">Home</a>
+            </div>
+            <div class="footer-box">
+                <h3>Location</h3>
+                <a href="#">Somervile</a>
+                <a href="#">Medford</a>
+                <a href="#">On-Campus</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <a href="#">(617) 999 9999</a>
+                <a href="#">help@tsublet.com</a>
+                <div class="social">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Four Musketeers All Rights Reserved</p>
     </div>
-
-</main>
-
-
-<footer>
-    <nav class="nav-items">
-        <a href="contact.html">Contact</a>
-    </nav>
-</footer>
-
+    
 </body>
-
 </html>
-
