@@ -118,6 +118,7 @@ textarea{
 		email = document.getElementById('email').value;
 		Street = document.getElementById('street').value;
 		city = document.getElementById('city').value;
+		price = document.getElementById('price').value;
 		Sdate = document.getElementById('Start_Test_DatetimeLocal').value;
 		Edate = document.getElementById('End_Test_DatetimeLocal').value;
 
@@ -130,6 +131,9 @@ textarea{
 		}
 		else if(city==""){
 			alert("Please enter the name of the city")
+		}
+		else if(price ==""){
+			alert("Please enter the room's price per month")
 		}
 		else if(Sdate == ""){
 			alert("Please enter the Move In date")
