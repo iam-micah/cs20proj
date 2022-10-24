@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tufts Sublet | Find Your Perfect Room</title>
+
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            .room {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                min-height: 60vh;
+            }
+            
+            .room-img img {
+                height: 300px;
+                width: 500px;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 1.5rem;
+            }
+
+            .room-desc {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+            }
+
+            .room-title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #room-desc {
+                margin-top: 10px;
+            }
+
+            .bxs-map {
+                font-size: 27px;
+                margin-left: -5px;
+                padding-right: 5px;
+            }
+            
+            .icon {
+                font-size: 24px;
+                padding-right: 5px;
+            }
+
+            .room-property {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            #contact-btn-container {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            @media screen and (max-width: 900px) {
+                section {
+                    padding-top: 0px;
+                }
+
+                .room {
+                    flex-direction: column;
+                }
+
+                .room-img {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <div class="nav container">
+                <!-- Logo -->
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                <input type="checkbox" name="" id="menu">
+                <label for="menu"><i class="bx bx-menu" id="menu-icon"></i></label>
+                <!-- Nav List -->
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="list_room.html">List Room</a></li>
+                    <li><a href="find_room.html">Find Room</a></li>
+                </ul>
+
+                <!-- Log In Button -->
+                <a href="#" class="login-btn">Log In</a>
+            </div>
+        </header>
+
+        <!-- Image in First Column. Information in Second Column -->
+        <section class="room container" id="room">
+            <div class="room-img">
+                <img id="room-img-img" src="img/apartment_0.jpg" alt="room">
+            </div>
+
+            <div class="room-desc">
+                <div class="room-title">
+                    <i class='bx bxs-map'></i>
+                    <h1 id="room-title-h1"></h1>
+                </div>
+
+                <p id="room-desc"></p>
+
+                <div class="room-property">
+                    <i class='bx bxs-bath icon'></i>
+                    <span id="room-num-bathrooms"></span>
+                </div>
+
+                <div class="room-property">
+                    <i class='bx bx-dollar icon'></i>
+                    <span id="room-cost-per-month"></span>
+                </div>
+
+                <div class="room-property">
+                    <i class='bx bxs-calendar icon'></i>
+                    <span id="room-availability"></span>
+                </div>
+
+                <div id="contact-btn-container">
+                    <a href="#" class="login-btn" id="contact-btn-link">Contact</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="footer">
+            <div class="footer-container container">
+                <!-- Logo -->
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <a href="#">List Room</a>
+                    <a href="#">Find Room</a>
+                    <a href="#">Home</a>
+                </div>
+                <div class="footer-box">
+                    <h3>Location</h3>
+                    <a href="#">Somervile</a>
+                    <a href="#">Medford</a>
+                    <a href="#">On-Campus</a>
+                </div>
+                <div class="footer-box">
+                    <h3>Contact</h3>
+                    <a href="#">(617) 999 9999</a>
+                    <a href="#">help@tsublet.com</a>
+                    <div class="social">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // get the room id from the url
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+            });
+            let currRoom = parseInt(params.room);
+
+            // check if the room id is valid
+            let existingRooms = [1, 2, 3, 4];
+            if (currRoom == NaN ||  !existingRooms.includes(currRoom)) {
+                window.location.href = "find_room.html";
+            }
+
+            // load JSON data from rooms.json
+            let xhr = new XMLHttpRequest(), jsonData;
+            xhr.open('GET', 'rooms.json', false);
+            xhr.send();
+            jsonData = JSON.parse(xhr.responseText);
+            let thisRoom = jsonData[currRoom - 1];
+
+            const move_in_date = new Date(thisRoom.move_in_date).toLocaleDateString();
+            const move_out_date = new Date(thisRoom.move_out_date).toLocaleDateString();
+            
+            // fill the room with the correct data
+            document.getElementById("room-img-img").src = thisRoom.img;
+            document.getElementById("room-title-h1").innerHTML = thisRoom.location;
+            document.getElementById("room-desc").innerHTML = thisRoom.description;
+            document.getElementById("room-num-bathrooms").innerHTML = thisRoom.bathrooms + " Bathroom";
+            document.getElementById("room-cost-per-month").innerHTML = thisRoom.price + " per month";
+            document.getElementById("room-availability").innerHTML = "Available: " + move_in_date + " - " + move_out_date;
+            document.getElementById("contact-btn-link").href = `mailto:${thisRoom.email}`;
+
+        </script>
+   </body>
+</html>

@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "location": "45 Upland Rd, Somerville, MA",
+        "img": "img/apartment_0.jpg",
+        "email": "crhis.tilton@tufts.edu",
+        "price": 1050,
+        "bathrooms": 1,
+        "description": "Looking for someone to sublet my room while I am away for work this summer. TV, cooking utensils, and cutlery is provided. Utilities not included.",
+        "move_in_date": "06-01-2023",
+        "move_out_date": "09-01-2023"
+    },
+    {
+        "id": 2,
+        "location": "69 Bromfield Rd, Somerville, MA",
+        "img": "img/apartment_1.jpg",
+        "email": "adam.bernstein@tufts.edu",
+        "price": 950,
+        "bathrooms": 2,
+        "description": "Looking for a subletter while I go abroad next semester. The room comes with 4 great roommates and two bathrooms. Lots of video games and movies watched in the common room. Utilities not included.",
+        "move_in_date": "01-01-2023",
+        "move_out_date": "06-01-2023"
+    },
+    {
+        "id": 3,
+        "location": "79 Ossipee Rd, Somerville, MA",
+        "img": "img/apartment_2.jpg",
+        "email": "sam.gatti@tufts.edu",
+        "price": 980,
+        "bathrooms": 1,
+        "description": "Subletter needed ASAP! Last person bailed out on me last minute, looking for someone to sublet while I go home for Winter break. Really great unit. Awesome location and upstairs neighbors are super nice.",
+        "move_in_date": "12-01-2023",
+        "move_out_date": "01-01-2024"
+    },
+    {
+        "id": 4,
+        "location": "19 Fairmount St, Medford, MA",
+        "img": "img/apartment_3.jpg",
+        "email": "jack.walsh@tufts.edu",
+        "price": 1020,
+        "bathrooms": 1,
+        "description": "Subletter needed for next summer. Quick walk to the T Station in Davis. Really nice unit with friendly roommates. Email for more information.",
+        "move_in_date": "06-01-2023",
+        "move_out_date": "09-01-2023"
+    }
+]

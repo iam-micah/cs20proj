@@ -60,8 +60,8 @@
         Click on any picture to learn more
     </h2>
     <script>
-        const roomImgs = ["images/apartment_0.jpg", "images/apartment_1.jpg",
-        "images/apartment_2.jpg","images/apartment_3.jpg"];
+        const roomImgs = ["img/apartment_0.jpg", "img/apartment_1.jpg",
+        "img/apartment_2.jpg","img/apartment_3.jpg"];
         
 
         $(document).ready(function(){
@@ -72,16 +72,16 @@
             $("#apt4").append("<img src='" + roomImgs[3] + "' width='65%'/>");
             
             $("#apt1").click(function(e){
-                window.location.href = "https://google.com";
+                window.location.href = "/room.html?room=1";
             });
             $("#apt2").click(function(e){
-                window.location.href = "https://google.com";
+                window.location.href = "/room.html?room=2";
             });
             $("#apt3").click(function(e){
-                window.location.href = "https://google.com";
+                window.location.href = "/room.html?room=3";
             });
             $("#apt4").click(function(e){
-                window.location.href = "https://google.com";
+                window.location.href = "/room.html?room=4";
             });
         })
 
