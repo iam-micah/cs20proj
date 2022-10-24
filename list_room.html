@@ -16,7 +16,7 @@
 <style>
 
 
-p label{
+/*p label{
 
 	text-align: left;
 	width: 100px;
@@ -27,7 +27,7 @@ p label{
 
 input[type=text] {
   padding:10px;
-  margin:10px 0; // add top and bottom margin
+  margin:10px 0; 
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -38,7 +38,7 @@ input[type=text] {
 
 input[type=email] {
   padding:10px;
-  margin:10px 0; // add top and bottom margin
+  margin:10px 0; 
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -54,13 +54,103 @@ input, textarea {
 
 #subject{
   padding:10px;
-  margin:10px 0; // add top and bottom margin
+  margin:10px 0; 
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius:10px;
   width:200px;
-  display: inline-block;s
+  display: inline-block;
+}*/
+body {
+    width: 100%;
+    height: 100vh;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--second-color);
+}
+.main-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}  
+.main-container:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(30px);
+}  
+.contact-box {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.right {
+    padding: 25px 40px;
+}
+
+.field{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+textarea{
+    min-height: 150px;
+}
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+.date-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: block;
+    bottom: 4rem;
+    padding: 30px;
+    border-radius: 0.5rem;
+}
+.input-box {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box span {
+    font-weight: 500;
+}
+.input-box input {
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #fdfdfd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
 }
 
 </style>
@@ -146,34 +236,47 @@ input, textarea {
 	<h1>
 		List Your Room
 	</h1>
+    <div class="main-container">
+        <div class="contact-box">
+            <div class="right">
+                <form action="#" >
 
-	<form action="#" >
-
-		<p class="user_Info"><input type="text" id="fname" placeholder="First Name" /></p>
-		<p class="user_Info"><input type="text" id="lname" placeholder="Last Name" /></p>
-
-		<p class="user_Info"><input type="email"  id='email' placeholder="Email*" required/></p>
-
-		<p class="room_Info address"> <input type="text" id='street' placeholder="Street*" required/></p>
-		<p class="room_Info address"><input type="text" id='city' placeholder="City*" required /></p>
-
-		
-
-		<p class="room_Info"><input type="text" id='price' placeholder="Price/Month*" /></p>
-		<p class="num_Bathrooms"><input type="text" id="bathrooms" placeholder="Number of bathrooms"/></p>
-
-		<div class="room_Description">
-        <textarea id="subject" name="subject" placeholder="Extra information about the room...." /></textarea>
-      </div>
-
-		<p class="start_Date"><label>Move In*:</label><input type="datetime-local" id="Start_Test_DatetimeLocal" required/></p>
-		<p class="end_Date"><label>Move Out*:</label><input type="datetime-local" id="End_Test_DatetimeLocal" required/></p>
-
-		<p class="room_Img"><label>Room Image(s):</label><input type="file" id="room_Image" name="room_photo" required/>
-
-		<input type = "button" value = "List Room" id="list_button" onclick="validate()"/>
-
-</form>
+                    <p class="user_Info"><input class="field" type="text" id="fname" placeholder="First Name" /></p>
+                    <p class="user_Info"><input class="field" type="text" id="lname" placeholder="Last Name" /></p>
+            
+                    <p class="user_Info"><input class="field" type="email"  id='email' placeholder="Email*" required/></p>
+            
+                    <p class="room_Info address"> <input class="field" type="text" id='street' placeholder="Street*" required/></p>
+                    <p class="room_Info address"><input class="field" type="text" id='city' placeholder="City*" required /></p>
+            
+                    
+            
+                    <p class="room_Info"><input class="field" type="text" id='price' placeholder="Price/Month*" /></p>
+                    <p class="num_Bathrooms"><input class="field" type="text" id="bathrooms" placeholder="Number of bathrooms"/></p>
+            
+                    <div class="room_Description">
+                    <textarea class="field" id="subject" name="subject" placeholder="Extra information about the room...." ></textarea>
+                  </div>
+                <div class="date-container">
+                    <div class="input-box">
+                        <span>Move-in</span>
+                        <input type="date" name="" id="">
+                    </div>
+                    <div class="input-box">
+                        <span>Move-out</span>
+                        <input type="date" name="" id="">
+                    </div>
+                </div>
+                    <p class="room_Img"><label>Room Image(s):</label><input type="file" id="room_Image" name="room_photo" required/>
+            
+                    <input class="login-btn" type = "button" value = "List Room" id="list_button" onclick="validate()"/>
+                
+            
+            </form>
+            </div>
+        </div>
+    </div>
+	
 
 	
 </main>
