@@ -121,7 +121,12 @@
                 <p id="room-desc"></p>
 
                 <div class="room-property">
-                    <i class='bx bxs-bath icon'></i>
+                    <i class='bx bx-bed icon'></i>
+                    <span id="room-num-bedrooms"></span>
+                </div>
+
+                <div class="room-property">
+                    <i class='bx bx-bath icon'></i>
                     <span id="room-num-bathrooms"></span>
                 </div>
 
@@ -131,7 +136,7 @@
                 </div>
 
                 <div class="room-property">
-                    <i class='bx bxs-calendar icon'></i>
+                    <i class='bx bx-calendar icon'></i>
                     <span id="room-availability"></span>
                 </div>
 
@@ -176,10 +181,10 @@
             const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
             });
-            let currRoom = parseInt(params.room);
+            let currRoom = parseInt(params.roomId);
 
             // check if the room id is valid
-            let existingRooms = [1, 2, 3, 4];
+            let existingRooms = [1, 2, 3, 4, 5, 6];
             if (currRoom == NaN ||  !existingRooms.includes(currRoom)) {
                 window.location.href = "find_room.html";
             }
@@ -191,18 +196,16 @@
             jsonData = JSON.parse(xhr.responseText);
             let thisRoom = jsonData[currRoom - 1];
 
-            const move_in_date = new Date(thisRoom.move_in_date).toLocaleDateString();
-            const move_out_date = new Date(thisRoom.move_out_date).toLocaleDateString();
             
             // fill the room with the correct data
             document.getElementById("room-img-img").src = thisRoom.img;
             document.getElementById("room-title-h1").innerHTML = thisRoom.location;
             document.getElementById("room-desc").innerHTML = thisRoom.description;
-            document.getElementById("room-num-bathrooms").innerHTML = thisRoom.bathrooms + " Bathroom";
+            document.getElementById("room-num-bedrooms").innerHTML = `${thisRoom.bedrooms} ${(thisRoom.bedrooms > 1) ? " Bedrooms" : " Bedroom"}`;
+            document.getElementById("room-num-bathrooms").innerHTML = `${thisRoom.bathrooms} ${(thisRoom.bathrooms > 1) ? " Bathrooms" : " Bathroom"}`;
             document.getElementById("room-cost-per-month").innerHTML = thisRoom.price + " per month";
-            document.getElementById("room-availability").innerHTML = "Available: " + move_in_date + " - " + move_out_date;
+            document.getElementById("room-availability").innerHTML = thisRoom.availability;
             document.getElementById("contact-btn-link").href = `mailto:${thisRoom.email}`;
-
         </script>
    </body>
 </html>
