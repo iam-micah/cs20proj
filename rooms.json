@@ -7,7 +7,7 @@
         "price": 1000,
         "bedrooms": 5,
         "bathrooms": 2,
-        "description": "Looking for someone to sublet my room while I am away for work this summer. TV, cooking utensils, and cutlery is provided. Utilities not included.",
+        "description": "Looking for someone to sublet my room while I am studying abroad next year. TV, cooking utensils, and cutlery is provided. Utilities not included.",
         "availability": "2023-2024 Academic Year"
     },
     {
@@ -18,7 +18,7 @@
         "price": 2000,
         "bedrooms": 5,
         "bathrooms": 2,
-        "description": "Looking for a subletter while I go abroad next semester. The room comes with 4 great roommates and two bathrooms. Lots of video games and movies watched in the common room. Utilities not included.",
+        "description": "Looking for a subletter while I am away this summer. The room comes with 4 great roommates and two bathrooms. Lots of video games and movies watched in the common room. Utilities not included.",
         "availability": "Summer 2023"
     },
     {
@@ -29,7 +29,7 @@
         "price": 2000,
         "bedrooms": 5,
         "bathrooms": 2,
-        "description": "Subletter needed ASAP! Last person bailed out on me last minute, looking for someone to sublet while I go home for Winter break. Really great unit. Awesome location and upstairs neighbors are super nice.",
+        "description": "Subletter needed ASAP! Last person bailed out on me last minute, looking for someone to sublet while I take the semester off. Really great unit. Awesome location and upstairs neighbors are super nice.",
         "availability": "Fall 2023"
     },
     {
@@ -40,7 +40,7 @@
         "price": 2000,
         "bedrooms": 5,
         "bathrooms": 2,
-        "description": "Subletter needed for next summer. Quick walk to the T Station in Davis. Really nice unit with friendly roommates. Email for more information.",
+        "description": "Subletter needed for this spring. Quick walk to the T Station in Davis. Really nice unit with friendly roommates. Email for more information.",
         "availability": "Spring 2023"
     },
     {
@@ -51,7 +51,7 @@
         "price": 2000,
         "bedrooms": 5,
         "bathrooms": 2,
-        "description": "",
+        "description": "Subletter requested! Looking for someone to hold down the fort while I am away. Cleanly unit with great roommates. Utilities not included.",
         "availability": "2023-2024 Academic Year"
     },
     {
@@ -62,7 +62,7 @@
         "price": 2000,
         "bedrooms": 5,
         "bathrooms": 2,
-        "description": "",
+        "description": "Looking for a subletter ASAP. Summer 2023. Great location and great roommates. Utilities not included.",
         "availability": "Summer 2023"
     }
 ]
