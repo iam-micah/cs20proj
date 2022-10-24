@@ -8,14 +8,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 <link rel="stylesheet" href="css/styles.css">
 
-<style>
-    ul {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-      }
-</style>
-
 </head>
 
 
@@ -52,61 +44,112 @@
 	</div>
 </header>
 
-<main>
-    <h1>
-        View All Available Rooms
-    </h1>
-    <h2>
-        Click on any picture to learn more
-    </h2>
-    <script>
-        const roomImgs = ["img/apartment_0.jpg", "img/apartment_1.jpg",
-        "img/apartment_2.jpg","img/apartment_3.jpg"];
-        
 
-        $(document).ready(function(){
-            
-            $("#apt1").append("<img src='" + roomImgs[0] + "' width='65%'/>");
-            $("#apt2").append("<img src='" + roomImgs[1] + "' width='65%'/>");
-            $("#apt3").append("<img src='" + roomImgs[2] + "' width='65%'/>");
-            $("#apt4").append("<img src='" + roomImgs[3] + "' width='65%'/>");
-            
-            $("#apt1").click(function(e){
-                window.location.href = "/room.html?room=1";
-            });
-            $("#apt2").click(function(e){
-                window.location.href = "/room.html?room=2";
-            });
-            $("#apt3").click(function(e){
-                window.location.href = "/room.html?room=3";
-            });
-            $("#apt4").click(function(e){
-                window.location.href = "/room.html?room=4";
-            });
-        })
+<!-- Rooms -->
+<section class="rooms container" id="rooms">
+    <div class="heading">
+        <span>Recent Listings</span>
+        <h2>Our Featured Spaces</h2>
+        <p> Discover Our Most Recent Listings</p> <br> We guarantee you'll find the right one for you</p>
+    </div>
+    <div class="rooms-container container">
+        <!-- Box 1 -->
+        <div class="box">
+            <img src="img/picture1.jpg" alt="picture1">
+            <h3>$1,000</h3>
+            <div class="content">
+                <div class="tex">
+                    <h3>37 Adams</h3>
+                    <p>Full Year</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-bed"><span>5</span></i>
+                    <i class="bx bx-bath"><span>2</span></i>
+                </div>
+            </div>
+        </div>
 
-    </script>
+        <!-- Box 2 -->
+        <div class="box">
+            <img src="img/picture2.jpg" alt="picture2">
+            <h3>$2,000</h3>
+            <div class="content">
+                <div class="tex">
+                    <h3>20 Winthrop</h3>
+                    <p>Summer</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-bed"><span>5</span></i>
+                    <i class="bx bx-bath"><span>2</span></i>
+                </div>
+            </div>
+        </div>
 
-    <ul class = twoCols>
-        <li id='apt1' class="left">
-            Price: $1050<br>
-            Location: 45 Upland Rd Somerville Ma<br>
-        </li>
-        <li id='apt2' class="left">
-            Price: $950<br>
-            Location: 69 Bromfield Rd Somerville Ma<br>
-        </li>
-        <li id='apt3' class="right">
-            Price: $980<br>
-            Location: 79 Ossipee Rd Somerville Ma<br>
-        </li>
-        <li id='apt4' class="right">
-            Price: $1020<br>
-            Location: 19 Fairmount St Medford Ma<br>
-        </li>
-    </ul> 
+        <!-- Box 3 -->
+        <div class="box">
+            <img src="img/picture3.jpg" alt="picture3">
+            <h3>$2,000</h3>
+            <div class="content">
+                <div class="tex">
+                    <h3>81 Jane</h3>
+                    <p>Fall</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-bed"><span>5</span></i>
+                    <i class="bx bx-bath"><span>2</span></i>
+                </div>
+            </div>
+        </div>
 
-</main>
+        <!-- Box 4 -->
+        <div class="box">
+            <img src="img/picture4.jpg" alt="picture4">
+            <h3>$2,000</h3>
+            <div class="content">
+                <div class="tex">
+                    <h3>18 Sussex</h3>
+                    <p>Spring</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-bed"><span>5</span></i>
+                    <i class="bx bx-bath"><span>2</span></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="box">
+            <img src="img/picture5.jpg" alt="picture5">
+            <h3>$2,000</h3>
+            <div class="content">
+                <div class="tex">
+                    <h3>22 Downland</h3>
+                    <p>Full Year</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-bed"><span>5</span></i>
+                    <i class="bx bx-bath"><span>2</span></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box 6 -->
+        <div class="box">
+            <img src="img/picture6.jpg" alt="picture6">
+            <h3>$2,000</h3>
+            <div class="content">
+                <div class="tex">
+                    <h3>28 Westfield</h3>
+                    <p>Summer</p>
+                </div>
+                <div class="icon">
+                    <i class="bx bx-bed"><span>5</span></i>
+                    <i class="bx bx-bath"><span>2</span></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- Footer -->
