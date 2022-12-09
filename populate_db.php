@@ -1,7 +1,5 @@
 <?php 
 
-header('Access-Control-Allow-Origin: *');
-
 //establish connection with database
     $server = "127.0.0.1";
     $userid = "ue25bvzryotbr";
