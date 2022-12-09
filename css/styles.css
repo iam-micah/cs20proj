@@ -49,6 +49,11 @@ section {
     text-transform: uppercase;
 }
 
+.logo .bx {
+    font-size: 40px;
+    color: var(--text-color);
+}
+
 header {
     display: block;
     width: 100%;
