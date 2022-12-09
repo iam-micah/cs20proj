@@ -330,7 +330,7 @@ header {
 /* Footer */
 .footer {
     background: var(--main-color);
-    color: var(--bg-color);
+    color: var(--text-color);
     border-radius: 5rem 0 0 0;
 }
 
@@ -364,7 +364,7 @@ header {
 }
 
 .footer-box a:hover {
-    color: var(--text-color);
+    color: var(--second-color);
 }
 
 .social a {
@@ -379,7 +379,7 @@ header {
 .copyright {
     padding: 20px;
     text-align: center;
-    color: var(--bg-color);
+    color: var(--text-color);
     background: var(--main-color);
 }
 
