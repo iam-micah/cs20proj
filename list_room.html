@@ -200,7 +200,8 @@ textarea{
     <div class="main-container">
         <div class="contact-box">
             <div class="right">
-                <form method="get" onsubmit='return validatefunction()' action="populate_db.php" >
+                <form method="post" action="populate_db.php" > 
+                    <!-- onsubmit='return validatefunction()' -->
 
                     <p class="user_Info"><input class="field" type="text" id="fname" name="Fname" placeholder="First Name" /></p>
                     <p class="user_Info"><input class="field" type="text" id="lname" name="Lname" placeholder="Last Name" /></p>
@@ -232,7 +233,7 @@ textarea{
                 </div>
                     <p class="room_Img"><label>Room Image:</label><input type="file" id="room_Image" name="room_photo" required/>
             
-                    <input class="login-btn" type = "button" value = "List Room" id="list_button" name="List_button" onclick="validate()"/>
+                    <input class="login-btn" type = "submit" value = "List Room" id="list_button" name="List_button" />
                 
             
             </form>
