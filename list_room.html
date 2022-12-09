@@ -200,37 +200,39 @@ textarea{
     <div class="main-container">
         <div class="contact-box">
             <div class="right">
-                <form action="" >
+                <form method="get" onsubmit='return validatefunction()' action="populate_db.php" >
 
-                    <p class="user_Info"><input class="field" type="text" id="fname" placeholder="First Name" /></p>
-                    <p class="user_Info"><input class="field" type="text" id="lname" placeholder="Last Name" /></p>
+                    <p class="user_Info"><input class="field" type="text" id="fname" name="Fname" placeholder="First Name" /></p>
+                    <p class="user_Info"><input class="field" type="text" id="lname" name="Lname" placeholder="Last Name" /></p>
             
-                    <p class="user_Info"><input class="field" type="email"  id='email' placeholder="Email*" required/></p>
+                    <p class="user_Info"><input class="field" type="email"  id='email' name="Email" placeholder="Email*" required/></p>
             
-                    <p class="room_Info address"> <input class="field" type="text" id='street' placeholder="Street*" required/></p>
-                    <p class="room_Info address"><input class="field" type="text" id='city' placeholder="City*" required /></p>
-            
+                    <p class="room_Info address"><input class="field" type="text" id='house_number' name="House_number" placeholder="House Number*" required /></p>
+                    <p class="room_Info address"> <input class="field" type="text" id='street' name="Street" placeholder="Street*" required/></p>
+                    <p class="room_Info address"><input class="field" type="text" id='city' name="City" placeholder="City*" required /></p>
+                    <p class="room_Info address"><input class="field" type="text" id='zip' name="Zip" placeholder="Zip_code*" required /></p>
+                    
                     
             
-                    <p class="room_Info"><input class="field" type="text" id='price' placeholder="Price/Month*" /></p>
-                    <p class="num_Bathrooms"><input class="field" type="text" id="bathrooms" placeholder="Number of bathrooms"/></p>
+                    <p class="room_Info"><input class="field" type="text" id='price' name="Price" placeholder="Price/Month*" /></p>
+                    <p class="num_Bathrooms"><input class="field" type="text" id="bathrooms" name="Bathrooms" placeholder="Number of bathrooms"/></p>
             
                     <div class="room_Description">
-                    <textarea class="field" id="subject" name="subject" placeholder="Extra information about the room...." ></textarea>
+                    <textarea class="field" id="subject" name="Description" placeholder="Extra information about the room...." ></textarea>
                   </div>
                 <div class="date-container">
                     <div class="input-box">
                         <span>Move-in</span>
-                        <input type="date" name="" id="Start_Test_DatetimeLocal">
+                        <input type="date" name="Date_Start_Test_DatetimeLocal" id="Start_Test_DatetimeLocal">
                     </div>
                     <div class="input-box">
                         <span>Move-out</span>
-                        <input type="date" name="" id="End_Test_DatetimeLocal">
+                        <input type="date" name="Date_End_Test_DatetimeLocal" id="End_Test_DatetimeLocal">
                     </div>
                 </div>
-                    <p class="room_Img"><label>Room Image(s):</label><input type="file" id="room_Image" name="room_photo" required/>
+                    <p class="room_Img"><label>Room Image:</label><input type="file" id="room_Image" name="room_photo" required/>
             
-                    <input class="login-btn" type = "button" value = "List Room" id="list_button" onclick="validate()"/>
+                    <input class="login-btn" type = "button" value = "List Room" id="list_button" name="List_button" onclick="validate()"/>
                 
             
             </form>
