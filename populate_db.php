@@ -6,6 +6,10 @@
 </head>
 
 <body>
+    <script>
+console.log("heyyy process page");
+
+</script>
 	<?php
 
     // getting all the variables
