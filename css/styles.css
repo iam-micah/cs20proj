@@ -358,7 +358,7 @@ header {
 
 .footer-box a {
     font-size: 0.8rem;
-    color: var(--bg-color);
+    color: var(--text-color);
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
