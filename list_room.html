@@ -118,7 +118,6 @@ textarea{
 async function validate(){
 
     var check = true;
-    check0 = true;
     
     email = document.getElementById('email').value;
     Street = document.getElementById('street').value;
@@ -126,24 +125,10 @@ async function validate(){
     house_number = document.getElementById('house_number').value;
     zip = document.getElementById('zip').value;
     price = document.getElementById('price').value;
-    Sdate = document.getElementById('Start_Test_DatetimeLocal').value;
-    Edate = document.getElementById('End_Test_DatetimeLocal').value;
     YOUR_API_KEY = "4003d3b20f20431dba86de1e19554c0b";
 
     const url = `https://api.geoapify.com/v1/geocode/search?housenumber=${encodeURIComponent(house_number)}
     &street=${encodeURIComponent(Street)}&postcode=${encodeURIComponent(zip)}&city=${encodeURIComponent(city)}&apiKey=${YOUR_API_KEY}`;
-
-    // fetch(url).then(response => response.json())
-    // .then(result => {
-    //     console.log(result);
-    //     if (result.features.length === 0) {
-    //         console.log("The address is not found");
-    //     } else {
-    //         console.log("Matched address:")
-    //         console.log(result.features[0]);
-    //     }
-    // })
-    // .catch(error => console.log('error', error));
 
     const ACCEPT_LEVEL = 0.95;
     const DECLINE_LEVEL = 0.2;
@@ -170,29 +155,20 @@ async function validate(){
         } else if (address.rank.confidence < DECLINE_LEVEL) {
             validationResult.validation = 'NOT_CONFIRMED';
             alert("WARNING: Verify that the address you've put is valid")
-            alert("Address"+validationResult.validation)
-            ckeck = false;
 
         } else {
             validationResult.validation = 'PARTIALLY_CONFIRMED';
             alert("WARNING: Verify that the address you've put is valid")
-            alert("Address"+validationResult.validation)
             check = false;
         if (address.rank.confidence_street_level >= ACCEPT_LEVEL) {
             validationResult.validation_details = 'BUILDING_NOT_FOUND';
             alert("WARNING: Verify that the address you've put is valid")
-            alert("Address"+validationResult.validation)
-            check = false;
         } else if (address.rank.confidence_city_level >= ACCEPT_LEVEL) {
             validationResult.validation_details = 'HAS STREET DOUBTS';
             alert("WARNING: Verify that the address you've put is valid")
-            alert("Address"+validationResult.validation)
-            check = false;
         } else {
             validationResult.validation_details = 'HAS CITY DOUBTS';
             alert("WARNING: Verify that the address you've put is valid")
-            alert("Address"+validationResult.validation)
-            check = false;
             
         }
         }
@@ -200,8 +176,6 @@ async function validate(){
 
     })
     .catch(error => console.log('error', error));
-
-    alert(check0);
 
     if(email == ""){
         alert("Please enter your email address")
@@ -218,14 +192,6 @@ async function validate(){
     }
     else if(price ==""){
         alert("Please enter the room's price per month")
-        check = false;
-    }
-    else if(Sdate == ""){
-        alert("Please enter the Move In date")
-        check = false;
-    }
-    else if(Edate == ""){
-        alert("Please enter the Move Out date")
         check = false;
     }
     else {
@@ -283,15 +249,16 @@ async function validate(){
                     <p class="room_Info address"><input class="field" type="text" id='city' name="City" placeholder="City*" required /></p>
                     <p class="room_Info address"><input class="field" type="text" id='zip' name="Zip" placeholder="Zip_code*" required /></p>
                     
-                    
-            
                     <p class="room_Info"><input class="field" type="text" id='price' name="Price" placeholder="Price/Month*" required /></p>
                     <p class="num_Bathrooms"><input class="field" type="text" id="bathrooms" name="Bathrooms" placeholder="Number of bathrooms"/></p>
             
                     <div class="room_Description">
-                    <input type="text" class="field" id="subject" name="Description" placeholder="Extra information about the room....">
+                    <input class="field" type="text" id="subject" name="Description" placeholder="Extra information about the room...."/>
                     </div>
-                    <div class="date-container">
+                    <div class="availability">
+                    <input class="field" type="text" id="Availability" name="availability" placeholder="Summer 2022*" required/>
+                    </div>
+                    <!-- <div class="date-container">
                         <div class="input-box">
                             <span>Move-in</span>
                             <input type="date" name="Date_Start_Test_DatetimeLocal" id="Start_Test_DatetimeLocal">
@@ -300,7 +267,7 @@ async function validate(){
                             <span>Move-out</span>
                             <input type="date" name="Date_End_Test_DatetimeLocal" id="End_Test_DatetimeLocal">
                         </div>
-                    </div>
+                    </div> -->
                     <p class="room_Img"><label>Room Image:</label><input type="file" id="room_Image" name="room_photo" required/>
             
                     <input class="login-btn" type = "submit" value = "List Room" id="list_button" name="List_button" onclick="return validate()"/>
