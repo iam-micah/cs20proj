@@ -111,6 +111,9 @@
         <!-- Image in First Column. Information in Second Column -->
         <section class="room container main-top" id="room">
             <?php
+                //get the room id from the url
+                $room_id = $_GET['roomId'];
+
                 //establish connection with database
                 $server = "127.0.0.1";
                 $userid = "ue25bvzryotbr";
@@ -118,19 +121,17 @@
                 $db= "db4m4v99nim28z";
 
                 //create connections
-                $conn = new mysqli($server, $userid, $pw);
+                $conn = new mysqli($server, $userid, $pw, $db);
 
                 //check connection
                 if($conn->connect_error){
                     die("connection failed: ". $conn->connect_error);
                 }
 
-                //get the room id from the url
-                $room_id = $_GET['roomId'];
-
                 //get room data from the database
                 $sql = "SELECT * FROM RoomData where room_id = " . $room_id;
-                $result = $conn->query($sql);
+                $res = $conn->query($sql);
+                $result = $res->fetch_assoc();
 
                 //room image
                 echo '<div class="room-img">';
@@ -148,7 +149,26 @@
 
                     echo '<div class="room-property">';
                         echo '<i class="bx bx-bed icon"></i>';
-                        echo '<span id="room-num-bedrooms">' . $result['num'] . '</span>';
+                        echo '<span id="room-num-bedrooms">' . $result['num_bedrooms'] . '</span>';
+                    echo '</div>';
+
+                    echo '<div class="room-property">';
+                        echo '<i class="bx bx-bath icon"></i>';
+                        echo '<span id="room-num-bathrooms">' . $result['num_bathrooms'] . '</span>';
+                    echo '</div>';
+
+                    echo '<div class="room-property">';
+                        echo '<i class="bx bx-dollar icon"></i>';
+                        echo '<span id="room-cost-per-month">' . $result['price'] . ' per month</span>';
+                    echo '</div>';
+
+                    echo '<div class="room-property">';
+                        echo '<i class="bx bx-calendar icon"></i>';
+                        echo '<span id="room-availability">' . $result['availability'] . '</span>';
+                    echo '</div>';
+
+                    echo '<div id="contact-btn-container">';
+                        echo '<a href="mailto:' . $result['email'] . '" class="login-btn" id="contact-btn-link">Contact</a>';
                     echo '</div>';
                 echo '</div>';
 
